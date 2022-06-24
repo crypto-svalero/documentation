@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "16f8417c-fb6e-4ada-9512-ec023dc79517",
+		"name": "NFTs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18403911"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/NFT",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"NFT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add NFT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"picture\": \"https://www.alejandradeargos.com/images/Artistas/Beeple/07._meat_head.jpg\",\r\n    \"name\": \"Beeple\",  \r\n    \"value\": 15000,\r\n    \"date\": \"2022-06-22T16:35:49.331Z\",     \r\n    \"active\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/NFT",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"NFT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"active\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/NFT/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"NFT",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/NFT/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"NFT",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

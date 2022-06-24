@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "86895ed4-9b97-4241-a0df-e2f91383abe1",
+		"name": "Games",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18403911"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/CryptoGame",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"CryptoGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"picture\": \"https://i.blogs.es/42332f/axie/1366_2000.jpg\",\r\n    \"link\": \"https://axieinfinity.com/\", \r\n    \"name\": \"Axie Infinity\",  \r\n    \"value\": 24,\r\n    \"date\": \"2022-06-22T16:35:49.331Z\",\r\n    \"active\": true       \r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/CryptoGame",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"CryptoGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"active\": true       \r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/CryptoGame/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"CryptoGame",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/CryptoGame/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"CryptoGame",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
